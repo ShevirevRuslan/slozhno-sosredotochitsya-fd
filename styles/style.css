@@ -449,10 +449,6 @@
     grid-column: 2 / 4;
   }
 
-  .header__decorative-text {
-    right: 28px;
-  }
-
   .decorated-zone::before {
     top: 20px;
     right: 20px;
