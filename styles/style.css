@@ -16,7 +16,6 @@
   height: 100vh;
   min-height: 668px;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   padding-inline-start: var(--padding);
   padding-inline-end: var(--padding);
@@ -37,8 +36,8 @@
 
 /* Верхний правый уголок */
 .decorated-zone::before {
-  top: 9px;
-  right: 11px;
+  top: 10px;
+  right: 10px;
   border-top-color: var(--accent-color);
   border-right-color: var(--accent-color);
   border-bottom-color: transparent; /* Цвет уголка */
@@ -58,16 +57,50 @@
 .header__theme-menu {
   align-self: center;
   justify-self: end;
+  padding-block-start: 6px;
 }
 
 .header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 11.5px;
 }
 
+.header__theme-menu-item {
+  align-self: center;
+  justify-self: center;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  color: var(--button-color);
+  background-color: inherit;
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: var(--font-size);
+  line-height: 18px;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color-alpha);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
 .header__decorative-text {
-  width: 53px;
+  display: var(--decor-rec);
+  width: 57px;
   height: 26px;
   font-weight: normal;
   font-size: var(--font-size);
@@ -75,7 +108,7 @@
   color: var(--accent-color);
   position: absolute;
   top: 10px;
-  right: 19px;
+  right: 14px;
 }
 
 .header__decorative-text::after {
@@ -84,7 +117,7 @@
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--accent-color);
   display: inline-block;
-  margin-inline-start: 10px;
+  margin-inline-start: 11px;
   margin-block-end: 2px;
 }
 
@@ -102,6 +135,7 @@
   font-size: var(--font-size);
   line-height: 23.4px;
   align-self: center;
+  margin-block-end: 11px;
 }
 
 .title-decor {
@@ -126,6 +160,11 @@
   font-size: var(--font-size);
   line-height: 23.4px;
   color: var(--accent-color);
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
 }
 
 .card__heading {
@@ -171,6 +210,11 @@
   grid-template-columns: 1fr;
 }
 
+.gallery-images {
+  display: grid;
+  gap: 10px;
+}
+
 .gallery img {
   max-width: 100%;
 }
@@ -194,7 +238,7 @@
 @media (width >= 768px) {
 
   :root {
-    --pading: 20px;
+    --padding: 20px;
     --heading-font: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -203,12 +247,18 @@
   }
 
   .header {
-    min-width: 768px;
+    min-height: 1024px;
+    padding-inline-start: 0px;
+  }
+
+  .header__theme-menu-list {
+    margin-block-start: 10px;
   }
 
   .header__text {
     max-width: 364px;
     justify-self: end;
+    margin-block-end: 20px;
   }
 
   .main {
@@ -248,7 +298,7 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
   .gallery-image {
@@ -294,7 +344,7 @@
 
 @media (width >= 1024px) {
   :root {
-    --pading: 20px;
+    --padding: 20px;
     --heading-font: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -303,17 +353,23 @@
   }
 
   .header {
-    min-width: 768px;
+    height: 50vh;
+    min-height: 768px;
+  }
+
+  .header__decorative-text {
+    left: 943px;
   }
 
   .header__theme-menu {
   align-self: start;
   justify-self: center;
+  margin-inline-start: 20px;
 }
 
   .header__theme-menu-list {
-    flex-direction: row;
-    padding-block-start: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-block-start: 2px;
   }
 
   .header__text {
@@ -366,7 +422,7 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
   .gallery-image {
@@ -407,5 +463,10 @@
   .decorated-zone::after {
     bottom: 20px;
     left: 20px;
+  }
+
+  .footer {
+    height: 50vh;
+    min-height: 768px;
   }
 }
