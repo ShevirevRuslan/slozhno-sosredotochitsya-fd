@@ -4,15 +4,26 @@
 */
 :root {
   --font-size: 18px;
-  --font-style: 'IBM Plex mono', sans-serif;
+  --font-style: "IBM Plex mono", monospace;
   --background-image: url(../images/cover-image-dark.png);
-  --fusia-color: rgb(219, 0, 255);
+  --h1-color: rgb(219, 0, 255);
   --background-color: rgb(0, 0, 40);
   --accent-color: rgba(255, 0, 112, 1);
+  --accent-font-color: rgba(0, 0, 40, 1);
   --button-color: rgba(255, 0, 112, 1);
+  --section-heading-color: rgba(255, 0, 112, 1);
   --button-color-alpha: rgba(255, 0, 112, 0.4);
-  --pink-color: rgba(241, 178, 206, 1);
+  --font-color: rgba(241, 178, 206, 1);
   --padding: 10px;
   --heading-font: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --decor-rec: inline-block;
+  --page-gap: 40px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --padding: 20px;
+    --heading-font: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-gap: 60px;
+  }
 }

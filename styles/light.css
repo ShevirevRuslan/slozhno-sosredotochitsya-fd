@@ -6,22 +6,27 @@
 
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
-  --fusia-color: rgba(255, 194, 230, 1);
+  --h1-color: rgba(255, 194, 230, 1);
   --background-color: rgba(255, 241, 247, 1);
   --accent-color: rgba(255, 141, 203, 1);
+  --accent-font-color: rgba(53, 52, 48, 1);
   --button-color: rgba(53, 52, 48, 1);
+  --section-heading-color: rgba(53, 52, 48, 1);
   --button-color-alpha: rgba(50, 49, 45, 0.4);
-  --pink-color: rgba(53, 52, 48, 1);
+  --font-color: rgba(53, 52, 48, 1);
   --decor-rec: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
   --background-image: url(../images/cover-image-light.png);
-  --fusia-color: rgba(255, 194, 230, 1);
+  --h1-color: rgba(255, 194, 230, 1);
   --background-color: rgba(255, 241, 247, 1);
   --accent-color: rgba(255, 141, 203, 1);
-  --pink-color: rgba(53, 52, 48, 1);
+  --button-color: rgba(53, 52, 48, 1);
+  --section-heading-color: rgba(53, 52, 48, 1);
+  --button-color-alpha: rgba(50, 49, 45, 0.4);
+  --font-color: rgba(53, 52, 48, 1);
   --decor-rec: none;
   }
 }

@@ -6,9 +6,13 @@
 
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
-  --fusia-color: rgb(219, 0, 255);
+  --h1-color: rgb(219, 0, 255);
   --background-color: rgb(0, 0, 40);
   --accent-color: rgba(255, 0, 112, 1);
-  --pink-color: rgba(241, 178, 206, 1);
+  --accent-font-color: rgba(0, 0, 40, 1);
+  --button-color: rgba(255, 0, 112, 1);
+  --section-heading-color: rgba(255, 0, 112, 1);
+  --button-color-alpha: rgba(255, 0, 112, 0.4);
+  --font-color: rgba(241, 178, 206, 1);
   --decor-rec: inline-block;
 }
